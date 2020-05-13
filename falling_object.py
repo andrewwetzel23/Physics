@@ -51,6 +51,8 @@ initial_accleration = initial_velocity = initial_height = None
 initial_height = float(input("Enter initial height (greater than 0): "))
 initial_velocity = float(input("Enter initial velocity (positive is up): "))
 initial_accleration = float(input("Enter acceleration due to gravity (greater than 0): "))
+assert initial_height > 0, "Inital height was not greater than 0."
+assert initial_accleration > 0, "Initial acceleration was not greater than 0."
 
 #Calculate final time
 final_time = (initial_velocity / initial_accleration) + math.sqrt((2 * initial_height / initial_accleration) + (initial_velocity**2)/(initial_accleration**2))
